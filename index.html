@@ -303,30 +303,40 @@
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-6 padding_0">
-                  <form id="contactForm" action="send-email.php" method="POST" onsubmit="return handleFormSubmit(event);">
-                     <div class="mail_section">
-                        <div class="email_text">
-                           <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Name" name="name" required>
-                           </div>
-                           <div class="form-group">
-                              <input type="email" class="email-bt" placeholder="Email" name="email" required>
-                           </div>
-                           <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Phone Number" name="phone" required>
-                           </div>
-                           <div class="form-group">
-                              <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="message" required></textarea>
-                           </div>
-                           <div class="send_btn">
-                              <button type="submit" class="main_bt">SEND</button>
-                           </div>
-                           <div id="successMessage" style="display: none; color: green; margin-top: 10px;">
-                              Message sent successfully!
-                           </div>
-                        </div>
+                  <form id="contactForm">
+                     <div class="form-group">
+                        <input type="text" class="email-bt" placeholder="Name" name="name" required>
+                     </div>
+                     <div class="form-group">
+                        <input type="email" class="email-bt" placeholder="Email" name="email" required>
+                     </div>
+                     <div class="form-group">
+                        <input type="text" class="email-bt" placeholder="Phone Number" name="phone" required>
+                     </div>
+                     <div class="form-group">
+                        <textarea class="massage-bt" placeholder="Message" rows="5" name="message" required></textarea>
+                     </div>
+                     <div class="send_btn">
+                        <!-- <button type="submit" class="main_bt" style="background-color: #007bff; color: white; margin-right: 10px;">Send Email</button> -->
+                        <a href="#" onclick="sendWhatsApp()" class="main_bt" style="background-color: #25D366; color: white;">Send via WhatsApp</a>
                      </div>
                   </form>
+                  <script>
+                     function sendWhatsApp() {
+                        const name = document.querySelector('input[name="name"]').value;
+                        const phone = document.querySelector('input[name="phone"]').value;
+                        const message = document.querySelector('textarea[name="message"]').value;
+
+                        if (!name || !phone || !message) {
+                           alert("Please fill out all fields before sending a WhatsApp message.");
+                           return;
+                        }
+
+                        const whatsappMessage = `Hello, my name is ${name}. My phone number is ${phone}. Here is my message: ${message}`;
+                        const whatsappURL = `https://wa.me/9492246177?text=${encodeURIComponent(whatsappMessage)}`;
+                        window.location.href = whatsappURL;
+                     }
+                  </script>
                </div>
                <div class="col-md-6 padding_0">
                   <div class="map-responsive">
@@ -430,4 +440,3 @@
       </script>
    </body>
 </html>
-``` 

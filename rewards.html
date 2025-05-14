@@ -3,32 +3,72 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Redeem Rewards - Coming Soon</title>
-      <style>
-         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-         }
-         h1 {
-            font-size: 3rem;
-            text-shadow: 0 0 20px #ff5733, 0 0 30px #ff5733, 0 0 40px #ff5733;
-            animation: flicker 1.5s infinite alternate;
-         }
-         @keyframes flicker {
-            0% { opacity: 1; }
-            50% { opacity: 0.8; }
-            100% { opacity: 1; }
-         }
-      </style>
+      <title>Redeem Rewards</title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    </head>
    <body>
-      <h1>Coming Soon</h1>
+      <!--header section start -->
+      <div class="header_section">
+         <div class="container-fluid">
+            <div class="logo" style="float: left; margin-right: 20px;">
+               <a href="/index.html"><img src="/images/logo.jpg" alt="Brew Beans Logo" style="height: 60px;"></a>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="float: right;">
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About Us</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/gallery.html">Gallery</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/services.html">Services</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact Us</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-search" aria-hidden="true"></i><span class="sr-only">Search</span></a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+            <div style="clear: both;"></div>
+            <div style="background-color: #f8f9fa; padding: 10px 0; text-align: center;">
+               <marquee behavior="scroll" direction="left" style="color: #ff5733; font-weight: bold; font-size: 18px;">
+                  Launching Very Soon!
+               </marquee>
+            </div>
+         </div>
+      </div>
+      <!--header section end -->
+      <div class="container mt-5">
+         <h1 class="text-center" style="color: #ff5733;">Redeem Rewards</h1>
+         <div class="reward border p-3 mb-3">
+            <h2>Free Coffee</h2>
+            <p>Points Required: <span class="text-danger font-weight-bold">100</span></p>
+            <button class="btn btn-danger">Redeem Now</button>
+         </div>
+         <div class="reward border p-3 mb-3">
+            <h2>20% Discount Coupon</h2>
+            <p>Points Required: <span class="text-danger font-weight-bold">200</span></p>
+            <button class="btn btn-danger">Redeem Now</button>
+         </div>
+         <div class="reward border p-3 mb-3">
+            <h2>Exclusive Mug</h2>
+            <p>Points Required: <span class="text-danger font-weight-bold">300</span></p>
+            <button class="btn btn-danger">Redeem Now</button>
+         </div>
+      </div>
    </body>
 </html>
