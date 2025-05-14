@@ -25,11 +25,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port = 587;
 
         // Email content
-        $mail->setFrom('no-reply@brewbeans.com', 'Brew Beans');    } else {
-        $mail->addAddress('unionamis@gmail.com');og error to a file
-        $mail->addReplyTo($email, $name);s.log");
-        echo "Failed to send email. Please check your server configuration.";
+        $mail->setFrom('no-reply@brewbeans.com', 'Brew Beans');
+        $mail->addAddress('unionamis@gmail.com');
+        $mail->addReplyTo($email, $name);
         $mail->Subject = "New Contact Form Submission";
         $mail->Body = "Name: $name\nEmail: $email\nPhone: $phone\nMessage:\n$message";
 
-        $mail->send();        echo "Email sent successfully!";    } catch (Exception $e) {        echo "Failed to send email. Error: {$mail->ErrorInfo}";    }}?>
+        $mail->send();
+        echo "Email sent successfully!";
+    } catch (Exception $e) {
+        echo "Failed to send email. Error: {$mail->ErrorInfo}";
+    }
+}
+?>
