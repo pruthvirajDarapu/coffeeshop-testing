@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $whatsappMessage = "Hello, my name is $name. My phone number is $phone. Here is my message: $message";
 
     // WhatsApp API URL
-    $whatsappURL = "https://wa.me/9492246177?text=" . urlencode($whatsappMessage);
+    $whatsappURL = "https://wa.me/99999999?text=" . urlencode($whatsappMessage);
 
     // Redirect to WhatsApp
     header("Location: $whatsappURL");
