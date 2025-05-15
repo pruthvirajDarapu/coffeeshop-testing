@@ -3,6 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php'; // Ensure PHPMailer is installed via Composer
+$config = require 'config.php'; // Load configuration
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $name = htmlspecialchars($_POST['name']);
@@ -16,14 +17,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // SMTP configuration
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com'; // Gmail SMTP server
-        $mail->SMTPAuth = true;
-        $mail->Username = 'your-email@gmail.com'; // Replace with your Gmail address
-        $mail->Password = 'your-email-password'; // Replace with your Gmail app password
+        $mail->SMTPAuth = true;ariable
+        $mail->Username = $config['smtp_email']; // Retrieve email from config variable
+        $mail->Password = $config['smtp_password']; // Retrieve password from config
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Email settings
-        $mail->setFrom('your-email@gmail.com', 'Brew Beans'); // Replace with your Gmail address
+        $mail->setFrom($config['smtp_email'], 'Brew Beans'); // Use the same email for "From"
         $mail->addAddress('unionamis@gmail.com'); // Recipient's email
         $mail->Subject = 'New Contact Form Submission';
         $mail->Body = "Name: $name\nEmail: $email\nPhone: $phone\nMessage:\n$message";
