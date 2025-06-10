@@ -1,8 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
    var phoneInput = document.getElementById('phone');
    if (phoneInput) {
+      phoneInput.setAttribute('inputmode', 'numeric');
+      phoneInput.setAttribute('pattern', '[0-9]*');
+      phoneInput.addEventListener('keypress', function(e) {
+         if (e.key.length === 1 && !/[0-9]/.test(e.key)) {
+            e.preventDefault();
+         }
+      });
+      phoneInput.addEventListener('paste', function(e) {
+         var paste = (e.clipboardData || window.clipboardData).getData('text');
+         if (/\D/.test(paste)) {
+            e.preventDefault();
+         }
+      });
       phoneInput.addEventListener('input', function(e) {
-         // Remove all non-digit characters
          this.value = this.value.replace(/\D/g, '');
       });
    }
