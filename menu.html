@@ -67,567 +67,655 @@
       <div class="container mt-5">
          <h1 class="text-center" style="color: #ff5733;">Our Menu</h1>
 
-         <!-- Hot Coffee Variants Submenu -->
-         <h3 class="mt-5 mb-3" style="color:#b85c38;">☕ Hot Coffee Variants</h3>
-         <table class="table table-bordered">
-            <thead class="thead-dark">
-               <tr>
-                  <th>Item</th>
-                  <th>Description</th>
-                  <th>Size</th>
-                  <th>Price</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Espresso Shots</td>
-                  <td>Rich and bold espresso, served as 3 shots</td>
-                  <td>3 Shots (80ml each)</td>
-                  <td>₹250</td>
-               </tr>
-               <tr>
-                  <td>Flat White</td>
-                  <td>Smooth blend of espresso and velvety steamed milk</td>
-                  <td>Regular (250ml)</td>
-                  <td>₹330</td>
-               </tr>
-               <tr>
-                  <td>Macchiato</td>
-                  <td>Espresso "stained" with a dollop of milk foam</td>
-                  <td>Small (100ml)</td>
-                  <td>₹180</td>
-               </tr>
-               <tr>
-                  <td>Affogato</td>
-                  <td>A scoop of vanilla ice cream drowned in hot espresso</td>
-                  <td>Single Serve</td>
-                  <td>₹280</td>
-               </tr>
-               <tr>
-                  <td rowspan="3">Latte</td>
-                  <td rowspan="3">Espresso with steamed milk and a touch of foam</td>
-                  <td>Small (150ml)</td>
-                  <td>₹220</td>
-               </tr>
-               <tr>
-                  <td>Regular (250ml)</td>
-                  <td>₹350</td>
-               </tr>
-               <tr>
-                  <td>Large (350ml)</td>
-                  <td>₹420</td>
-               </tr>
-               <tr>
-                  <td rowspan="3">Cappuccino</td>
-                  <td rowspan="3">Espresso with equal parts steamed milk and foam</td>
-                  <td>Small (150ml)</td>
-                  <td>₹200</td>
-               </tr>
-               <tr>
-                  <td>Regular (250ml)</td>
-                  <td>₹320</td>
-               </tr>
-               <tr>
-                  <td>Large (350ml)</td>
-                  <td>₹390</td>
-               </tr>
-               <tr>
-                  <td rowspan="3">Americano</td>
-                  <td rowspan="3">Espresso diluted with hot water</td>
-                  <td>Small (150ml)</td>
-                  <td>₹170</td>
-               </tr>
-               <tr>
-                  <td>Regular (250ml)</td>
-                  <td>₹270</td>
-               </tr>
-               <tr>
-                  <td>Large (350ml)</td>
-                  <td>₹340</td>
-               </tr>
-               <tr>
-                  <td rowspan="3">Mocha</td>
-                  <td rowspan="3">Espresso with chocolate, steamed milk, and whipped cream</td>
-                  <td>Small (150ml)</td>
-                  <td>₹250</td>
-               </tr>
-               <tr>
-                  <td>Regular (250ml)</td>
-                  <td>₹400</td>
-               </tr>
-               <tr>
-                  <td>Large (350ml)</td>
-                  <td>₹470</td>
-               </tr>
-               <tr>
-                  <td>Tea-Types</td>
-                  <td>Variety of teas including green tea, black tea, and herbal tea</td>
-                  <td>Regular (150ml)</td>
-                  <td>₹160</td>
-               </tr>
-            </tbody>
-         </table>
+         <!-- Section Navigation Accordion (Multiple Open Allowed) -->
+         <div id="menuAccordion" class="mb-4">
+            <div class="card">
+               <div class="card-header" id="headingBreakfast">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center collapsed" type="button"
+                        data-toggle="collapse" data-target="#collapseBreakfast" aria-expanded="false" aria-controls="collapseBreakfast">
+                        <span>🍽️ Breakfast Specials</span>
+                        <span class="accordion-arrow">&#9660;</span>
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseBreakfast" class="collapse" aria-labelledby="headingBreakfast">
+                  <div class="card-body">
+                     <!-- Breakfast Specials Section (with all subcategories) -->
+                     <h3 id="breakfast" class="mt-5 mb-3" style="color:#b85c38;">🍽️ Breakfast Specials</h3>
 
-         <!-- Cold Coffee & Refreshers Submenu -->
-         <h3 class="mt-5 mb-3" style="color:#b85c38;">🧊 Cold Coffee & Refreshers</h3>
-         <table class="table table-bordered">
-            <thead class="thead-dark">
-               <tr>
-                  <th>Item</th>
-                  <th>Description</th>
-                  <th>Size</th>
-                  <th>Price</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Iced Latte</td>
-                  <td>Chilled espresso with cold milk and ice</td>
-                  <td>Regular (250ml)</td>
-                  <td>₹300</td>
-               </tr>
-               <tr>
-                  <td>Nitro Cold Brew</td>
-                  <td>Cold brew infused with nitrogen for a creamy texture</td>
-                  <td>Regular (250ml)</td>
-                  <td>₹370</td>
-               </tr>
-               <tr>
-                  <td>Coffee Tonic</td>
-                  <td>Espresso poured over tonic water with citrus</td>
-                  <td>Regular (250ml)</td>
-                  <td>₹320</td>
-               </tr>
-               <tr>
-                  <td rowspan="3">Cold Brew</td>
-                  <td rowspan="3">Slow-brewed coffee served chilled</td>
-                  <td>Small (150ml)</td>
-                  <td>₹220</td>
-               </tr>
-               <tr>
-                  <td>Regular (250ml)</td>
-                  <td>₹320</td>
-               </tr>
-               <tr>
-                  <td>Large (350ml)</td>
-                  <td>₹390</td>
-               </tr>
-               <tr>
-                  <td rowspan="3">Iced Americano</td>
-                  <td rowspan="3">Chilled espresso diluted with cold water</td>
-                  <td>Small (150ml)</td>
-                  <td>₹170</td>
-               </tr>
-               <tr>
-                  <td>Regular (250ml)</td>
-                  <td>₹270</td>
-               </tr>
-               <tr>
-                  <td>Large (350ml)</td>
-                  <td>₹340</td>
-               </tr>
-               <tr>
-                  <td rowspan="3">Cold Brew Flavored</td>
-                  <td rowspan="3">Cold brew coffee infused with flavors like vanilla or caramel</td>
-                  <td>Small (150ml)</td>
-                  <td>₹250</td>
-               </tr>
-               <tr>
-                  <td>Regular (250ml)</td>
-                  <td>₹350</td>
-               </tr>
-               <tr>
-                  <td>Large (350ml)</td>
-                  <td>₹420</td>
-               </tr>
-               <tr>
-                  <td rowspan="3">Mocha Iced</td>
-                  <td rowspan="3">Chilled mocha with chocolate, milk, and whipped cream</td>
-                  <td>Small (150ml)</td>
-                  <td>₹270</td>
-               </tr>
-               <tr>
-                  <td>Regular (250ml)</td>
-                  <td>₹420</td>
-               </tr>
-               <tr>
-                  <td>Large (350ml)</td>
-                  <td>₹490</td>
-               </tr>
-               <tr>
-                  <td rowspan="3">Coffee Frappes</td>
-                  <td rowspan="3">Blended coffee with ice and milk, topped with whipped cream</td>
-                  <td>Small (150ml)</td>
-                  <td>₹250</td>
-               </tr>
-               <tr>
-                  <td>Regular (250ml)</td>
-                  <td>₹400</td>
-               </tr>
-               <tr>
-                  <td>Large (350ml)</td>
-                  <td>₹470</td>
-               </tr>
-            </tbody>
-         </table>
+                     <!-- Classic & Millet Breakfasts -->
+                     <table class="table table-bordered mb-4">
+                        <thead class="thead-dark">
+                           <tr>
+                              <th>Item</th>
+                              <th>Description</th>
+                              <th>Serving</th>
+                              <th>Price</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Oat Idly</td>
+                              <td>Steamed idly made with oats and healthy grains</td>
+                              <td>2 pcs</td>
+                              <td>₹80</td>
+                           </tr>
+                           <tr>
+                              <td>Oat Dosa</td>
+                              <td>Thin crispy dosa made with oats batter</td>
+                              <td>1 pc</td>
+                              <td>₹90</td>
+                           </tr>
+                           <tr>
+                              <td>Ragi Idly</td>
+                              <td>Nutritious steamed idly made with ragi (finger millet)</td>
+                              <td>2 pcs</td>
+                              <td>₹90</td>
+                           </tr>
+                           <tr>
+                              <td>Ragi Dosa</td>
+                              <td>Healthy dosa made with ragi (finger millet) batter</td>
+                              <td>1 pc</td>
+                              <td>₹100</td>
+                           </tr>
+                           <tr>
+                              <td>Classic Idly</td>
+                              <td>Traditional South Indian steamed rice idly</td>
+                              <td>2 pcs</td>
+                              <td>₹70</td>
+                           </tr>
+                           <tr>
+                              <td>Classic Dosa</td>
+                              <td>Traditional South Indian crispy rice dosa</td>
+                              <td>1 pc</td>
+                              <td>₹80</td>
+                           </tr>
+                           <!-- Healthy & Wholesome Options -->
+                           <tr>
+                              <td>Quinoa Upma</td>
+                              <td>Protein-rich upma made with quinoa and vegetables</td>
+                              <td>1 bowl</td>
+                              <td>₹120</td>
+                           </tr>
+                           <tr>
+                              <td>Millet Pongal</td>
+                              <td>Comforting pongal made with foxtail millet and moong dal</td>
+                              <td>1 bowl</td>
+                              <td>₹110</td>
+                           </tr>
+                           <tr>
+                              <td>Vegetable Poha</td>
+                              <td>Flattened rice cooked with turmeric, mustard seeds, and veggies</td>
+                              <td>1 bowl</td>
+                              <td>₹90</td>
+                           </tr>
+                           <!-- Protein-Rich & Fusion Dishes -->
+                           <tr>
+                              <td>Paneer Stuffed Dosa</td>
+                              <td>Crispy dosa filled with spiced paneer</td>
+                              <td>1 pc</td>
+                              <td>₹130</td>
+                           </tr>
+                           <tr>
+                              <td>Egg White Omelette</td>
+                              <td>Fluffy omelette with herbs and veggies</td>
+                              <td>1 plate</td>
+                              <td>₹120</td>
+                           </tr>
+                           <tr>
+                              <td>Tofu Bhurji Toast</td>
+                              <td>Spiced scrambled tofu on multigrain toast</td>
+                              <td>2 slices</td>
+                              <td>₹140</td>
+                           </tr>
+                           <tr>
+                              <td>Avocado Dosa</td>
+                              <td>Dosa topped with mashed avocado and spices</td>
+                              <td>1 pc</td>
+                              <td>₹150</td>
+                           </tr>
+                           <!-- Continental-Inspired Additions -->
+                           <tr>
+                              <td>Greek Yogurt Parfait</td>
+                              <td>Layers of yogurt, granola, and fresh fruits</td>
+                              <td>1 cup</td>
+                              <td>₹130</td>
+                           </tr>
+                           <tr>
+                              <td>Peanut Butter Banana Toast</td>
+                              <td>Whole wheat toast with peanut butter and banana slices</td>
+                              <td>2 slices</td>
+                              <td>₹100</td>
+                           </tr>
+                           <tr>
+                              <td>Breakfast Smoothie Bowl</td>
+                              <td>Blended fruits topped with seeds, nuts, and granola</td>
+                              <td>1 bowl</td>
+                              <td>₹150</td>
+                           </tr>
+                           <!-- Regional Twists -->
+                           <tr>
+                              <td>Kanchipuram Idly</td>
+                              <td>Spiced idly with pepper, ginger, and curry leaves</td>
+                              <td>2 pcs</td>
+                              <td>₹90</td>
+                           </tr>
+                           <tr>
+                              <td>Pesarattu</td>
+                              <td>Andhra-style green gram dosa served with ginger chutney</td>
+                              <td>1 pc</td>
+                              <td>₹100</td>
+                           </tr>
+                           <tr>
+                              <td>Sabudana Khichdi</td>
+                              <td>Tapioca pearls cooked with peanuts and spices</td>
+                              <td>1 bowl</td>
+                              <td>₹110</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <!-- Regional Twists table ends here -->
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingHotCoffee">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center collapsed" type="button"
+                        data-toggle="collapse" data-target="#collapseHotCoffee" aria-expanded="false" aria-controls="collapseHotCoffee">
+                        <span>☕ Hot Coffee Variants</span>
+                        <span class="accordion-arrow">&#9660;</span>
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseHotCoffee" class="collapse" aria-labelledby="headingHotCoffee">
+                  <div class="card-body">
+                     <!-- Hot Coffee Variants Submenu -->
+                     <h3 id="hotcoffee" class="mt-5 mb-3" style="color:#b85c38;">☕ Hot Coffee Variants</h3>
+                     <table class="table table-bordered">
+                        <thead class="thead-dark">
+                           <tr>
+                              <th>Item</th>
+                              <th>Description</th>
+                              <th>Size</th>
+                              <th>Price</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Espresso Shots</td>
+                              <td>Rich and bold espresso, served as 3 shots</td>
+                              <td>3 Shots (80ml each)</td>
+                              <td>₹250</td>
+                           </tr>
+                           <tr>
+                              <td>Flat White</td>
+                              <td>Smooth blend of espresso and velvety steamed milk</td>
+                              <td>Regular (250ml)</td>
+                              <td>₹330</td>
+                           </tr>
+                           <tr>
+                              <td>Macchiato</td>
+                              <td>Espresso "stained" with a dollop of milk foam</td>
+                              <td>Small (100ml)</td>
+                              <td>₹180</td>
+                           </tr>
+                           <tr>
+                              <td>Affogato</td>
+                              <td>A scoop of vanilla ice cream drowned in hot espresso</td>
+                              <td>Single Serve</td>
+                              <td>₹280</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="3">Latte</td>
+                              <td rowspan="3">Espresso with steamed milk and a touch of foam</td>
+                              <td>Small (150ml)</td>
+                              <td>₹220</td>
+                           </tr>
+                           <tr>
+                              <td>Regular (250ml)</td>
+                              <td>₹350</td>
+                           </tr>
+                           <tr>
+                              <td>Large (350ml)</td>
+                              <td>₹420</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="3">Cappuccino</td>
+                              <td rowspan="3">Espresso with equal parts steamed milk and foam</td>
+                              <td>Small (150ml)</td>
+                              <td>₹200</td>
+                           </tr>
+                           <tr>
+                              <td>Regular (250ml)</td>
+                              <td>₹320</td>
+                           </tr>
+                           <tr>
+                              <td>Large (350ml)</td>
+                              <td>₹390</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="3">Americano</td>
+                              <td rowspan="3">Espresso diluted with hot water</td>
+                              <td>Small (150ml)</td>
+                              <td>₹170</td>
+                           </tr>
+                           <tr>
+                              <td>Regular (250ml)</td>
+                              <td>₹270</td>
+                           </tr>
+                           <tr>
+                              <td>Large (350ml)</td>
+                              <td>₹340</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="3">Mocha</td>
+                              <td rowspan="3">Espresso with chocolate, steamed milk, and whipped cream</td>
+                              <td>Small (150ml)</td>
+                              <td>₹250</td>
+                           </tr>
+                           <tr>
+                              <td>Regular (250ml)</td>
+                              <td>₹400</td>
+                           </tr>
+                           <tr>
+                              <td>Large (350ml)</td>
+                              <td>₹470</td>
+                           </tr>
+                           <tr>
+                              <td>Tea-Types</td>
+                              <td>Variety of teas including green tea, black tea, and herbal tea</td>
+                              <td>Regular (150ml)</td>
+                              <td>₹160</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingColdCoffee">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center collapsed" type="button"
+                        data-toggle="collapse" data-target="#collapseColdCoffee" aria-expanded="false" aria-controls="collapseColdCoffee">
+                        <span>🧊 Cold Coffee & Refreshers</span>
+                        <span class="accordion-arrow">&#9660;</span>
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseColdCoffee" class="collapse" aria-labelledby="headingColdCoffee">
+                  <div class="card-body">
+                     <!-- Cold Coffee & Refreshers Submenu -->
+                     <h3 id="coldcoffee" class="mt-5 mb-3" style="color:#b85c38;">🧊 Cold Coffee & Refreshers</h3>
+                     <table class="table table-bordered">
+                        <thead class="thead-dark">
+                           <tr>
+                              <th>Item</th>
+                              <th>Description</th>
+                              <th>Size</th>
+                              <th>Price</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Iced Latte</td>
+                              <td>Chilled espresso with cold milk and ice</td>
+                              <td>Regular (250ml)</td>
+                              <td>₹300</td>
+                           </tr>
+                           <tr>
+                              <td>Nitro Cold Brew</td>
+                              <td>Cold brew infused with nitrogen for a creamy texture</td>
+                              <td>Regular (250ml)</td>
+                              <td>₹370</td>
+                           </tr>
+                           <tr>
+                              <td>Coffee Tonic</td>
+                              <td>Espresso poured over tonic water with citrus</td>
+                              <td>Regular (250ml)</td>
+                              <td>₹320</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="3">Cold Brew</td>
+                              <td rowspan="3">Slow-brewed coffee served chilled</td>
+                              <td>Small (150ml)</td>
+                              <td>₹220</td>
+                           </tr>
+                           <tr>
+                              <td>Regular (250ml)</td>
+                              <td>₹320</td>
+                           </tr>
+                           <tr>
+                              <td>Large (350ml)</td>
+                              <td>₹390</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="3">Iced Americano</td>
+                              <td rowspan="3">Chilled espresso diluted with cold water</td>
+                              <td>Small (150ml)</td>
+                              <td>₹170</td>
+                           </tr>
+                           <tr>
+                              <td>Regular (250ml)</td>
+                              <td>₹270</td>
+                           </tr>
+                           <tr>
+                              <td>Large (350ml)</td>
+                              <td>₹340</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="3">Cold Brew Flavored</td>
+                              <td rowspan="3">Cold brew coffee infused with flavors like vanilla or caramel</td>
+                              <td>Small (150ml)</td>
+                              <td>₹250</td>
+                           </tr>
+                           <tr>
+                              <td>Regular (250ml)</td>
+                              <td>₹350</td>
+                           </tr>
+                           <tr>
+                              <td>Large (350ml)</td>
+                              <td>₹420</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="3">Mocha Iced</td>
+                              <td rowspan="3">Chilled mocha with chocolate, milk, and whipped cream</td>
+                              <td>Small (150ml)</td>
+                              <td>₹270</td>
+                           </tr>
+                           <tr>
+                              <td>Regular (250ml)</td>
+                              <td>₹420</td>
+                           </tr>
+                           <tr>
+                              <td>Large (350ml)</td>
+                              <td>₹490</td>
+                           </tr>
+                           <tr>
+                              <td rowspan="3">Coffee Frappes</td>
+                              <td rowspan="3">Blended coffee with ice and milk, topped with whipped cream</td>
+                              <td>Small (150ml)</td>
+                              <td>₹250</td>
+                           </tr>
+                           <tr>
+                              <td>Regular (250ml)</td>
+                              <td>₹400</td>
+                           </tr>
+                           <tr>
+                              <td>Large (350ml)</td>
+                              <td>₹470</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingSpecialty">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center collapsed" type="button"
+                        data-toggle="collapse" data-target="#collapseSpecialty" aria-expanded="false" aria-controls="collapseSpecialty">
+                        <span>🍫 Specialty Drinks</span>
+                        <span class="accordion-arrow">&#9660;</span>
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseSpecialty" class="collapse" aria-labelledby="headingSpecialty">
+                  <div class="card-body">
+                     <!-- Specialty Drinks Submenu -->
+                     <h3 id="specialty" class="mt-5 mb-3" style="color:#b85c38;">🍫 Specialty Drinks</h3>
+                     <table class="table table-bordered">
+                        <thead class="thead-dark">
+                           <tr>
+                              <th>Item</th>
+                              <th>Description</th>
+                              <th>Size</th>
+                              <th>Price</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Hot Chocolate</td>
+                              <td>Rich cocoa with steamed milk and whipped cream</td>
+                              <td>Regular (250ml)</td>
+                              <td>₹280</td>
+                           </tr>
+                           <tr>
+                              <td>Spiced Chai Latte</td>
+                              <td>Black tea with spices, milk, and sweetener</td>
+                              <td>Regular (250ml)</td>
+                              <td>₹260</td>
+                           </tr>
+                           <tr>
+                              <td>Turmeric Latte (Golden Milk)</td>
+                              <td>Anti-inflammatory turmeric with milk and spices</td>
+                              <td>Regular (250ml)</td>
+                              <td>₹250</td>
+                           </tr>
+                           <!-- ...existing specialty drinks if any... -->
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingSnacks">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center collapsed" type="button"
+                        data-toggle="collapse" data-target="#collapseSnacks" aria-expanded="false" aria-controls="collapseSnacks">
+                        <span>🕓 Evening Snacks</span>
+                        <span class="accordion-arrow">&#9660;</span>
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseSnacks" class="collapse" aria-labelledby="headingSnacks">
+                  <div class="card-body">
+                     <!-- Evening Snacks Section -->
+                     <h3 id="snacks" class="mt-5 mb-3" style="color:#b85c38;">🕓 Evening Snacks</h3>
 
-         <!-- Specialty Drinks Submenu -->
-         <h3 class="mt-5 mb-3" style="color:#b85c38;">🍫 Specialty Drinks</h3>
-         <table class="table table-bordered">
-            <thead class="thead-dark">
-               <tr>
-                  <th>Item</th>
-                  <th>Description</th>
-                  <th>Size</th>
-                  <th>Price</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Hot Chocolate</td>
-                  <td>Rich cocoa with steamed milk and whipped cream</td>
-                  <td>Regular (250ml)</td>
-                  <td>₹280</td>
-               </tr>
-               <tr>
-                  <td>Spiced Chai Latte</td>
-                  <td>Black tea with spices, milk, and sweetener</td>
-                  <td>Regular (250ml)</td>
-                  <td>₹260</td>
-               </tr>
-               <tr>
-                  <td>Turmeric Latte (Golden Milk)</td>
-                  <td>Anti-inflammatory turmeric with milk and spices</td>
-                  <td>Regular (250ml)</td>
-                  <td>₹250</td>
-               </tr>
-               <!-- ...existing specialty drinks if any... -->
-            </tbody>
-         </table>
+                     <!-- Indian-Inspired Snacks -->
+                     <h5 class="mt-4 mb-2" style="color:#6c757d;">🫓 Indian-Inspired Snacks</h5>
+                     <table class="table table-bordered mb-4">
+                        <thead class="thead-light">
+                           <tr>
+                              <th>Item</th>
+                              <th>Description</th>
+                              <th>Serving</th>
+                              <th>Price</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Mini Samosa Platter</td>
+                              <td>Assorted mini samosas (potato, paneer, corn) with chutneys</td>
+                              <td>6 pcs</td>
+                              <td>₹120</td>
+                           </tr>
+                           <tr>
+                              <td>Masala Vada</td>
+                              <td>Crispy lentil fritters served with coconut chutney</td>
+                              <td>3 pcs</td>
+                              <td>₹90</td>
+                           </tr>
+                           <tr>
+                              <td>Paneer Pakora</td>
+                              <td>Cottage cheese fritters in spiced gram flour batter</td>
+                              <td>6 pcs</td>
+                              <td>₹130</td>
+                           </tr>
+                           <tr>
+                              <td>Sabudana Vada</td>
+                              <td>Tapioca and peanut fritters, lightly spiced</td>
+                              <td>4 pcs</td>
+                              <td>₹110</td>
+                           </tr>
+                           <tr>
+                              <td>Chilli Cheese Toast</td>
+                              <td>Spicy cheese toast with green chillies and herbs</td>
+                              <td>2 slices</td>
+                              <td>₹100</td>
+                           </tr>
+                        </tbody>
+                     </table>
 
-         <!-- Snacks & Sides Submenu -->
-         <h3 class="mt-5 mb-3" style="color:#b85c38;">🍰 Snacks & Sides</h3>
-         <table class="table table-bordered">
-            <thead class="thead-dark">
-               <tr>
-                  <th>Item</th>
-                  <th>Description</th>
-                  <th>Size</th>
-                  <th>Price</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Croissant (Butter/Chocolate)</td>
-                  <td>Flaky, buttery pastry</td>
-                  <td>Single</td>
-                  <td>₹150 / ₹180</td>
-               </tr>
-               <tr>
-                  <td>Banana Bread Slice</td>
-                  <td>Moist banana bread with walnuts</td>
-                  <td>Single</td>
-                  <td>₹160</td>
-               </tr>
-               <tr>
-                  <td>Coffee Cake</td>
-                  <td>Soft cake with a cinnamon crumble topping</td>
-                  <td>Slice</td>
-                  <td>₹180</td>
-               </tr>
-               <!-- ...existing snacks & sides if any... -->
-            </tbody>
-         </table>
+                     <!-- Café-Style Light Bites -->
+                     <h5 class="mt-4 mb-2" style="color:#6c757d;">🥪 Café-Style Light Bites</h5>
+                     <table class="table table-bordered mb-4">
+                        <thead class="thead-light">
+                           <tr>
+                              <th>Item</th>
+                              <th>Description</th>
+                              <th>Serving</th>
+                              <th>Price</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Grilled Veg Sandwich</td>
+                              <td>Mixed veggies, cheese, and chutney in grilled bread</td>
+                              <td>1 sandwich</td>
+                              <td>₹130</td>
+                           </tr>
+                           <tr>
+                              <td>Paneer Tikka Wrap</td>
+                              <td>Spiced paneer and veggies in a whole wheat wrap</td>
+                              <td>1 wrap</td>
+                              <td>₹150</td>
+                           </tr>
+                           <tr>
+                              <td>Corn & Cheese Balls</td>
+                              <td>Crispy fried balls with gooey cheese and corn</td>
+                              <td>6 pcs</td>
+                              <td>₹140</td>
+                           </tr>
+                           <tr>
+                              <td>Loaded Nachos (Indian Style)</td>
+                              <td>Nachos topped with chaat masala, veggies, and cheese</td>
+                              <td>1 plate</td>
+                              <td>₹160</td>
+                           </tr>
+                        </tbody>
+                     </table>
 
-         <!-- Breakfast Specials Section (with all subcategories) -->
-         <h3 class="mt-5 mb-3" style="color:#b85c38;">🍽️ Breakfast Specials</h3>
+                     <!-- Healthy & Light Options -->
+                     <h5 class="mt-4 mb-2" style="color:#6c757d;">🥗 Healthy & Light Options</h5>
+                     <table class="table table-bordered mb-4">
+                        <thead class="thead-light">
+                           <tr>
+                              <th>Item</th>
+                              <th>Description</th>
+                              <th>Serving</th>
+                              <th>Price</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Sprout Salad Bowl</td>
+                              <td>Protein-rich sprouts with lemon, onion, and spices</td>
+                              <td>1 bowl</td>
+                              <td>₹100</td>
+                           </tr>
+                           <tr>
+                              <td>Hummus & Veggie Sticks</td>
+                              <td>Creamy hummus served with cucumber and carrot sticks</td>
+                              <td>1 plate</td>
+                              <td>₹120</td>
+                           </tr>
+                           <tr>
+                              <td>Multigrain Khakhra with Dip</td>
+                              <td>Crunchy khakhras served with mint yogurt dip</td>
+                              <td>1 plate</td>
+                              <td>₹90</td>
+                           </tr>
+                        </tbody>
+                     </table>
 
-         <!-- Classic & Millet Breakfasts -->
-         <table class="table table-bordered mb-4">
-            <thead class="thead-dark">
-               <tr>
-                  <th>Item</th>
-                  <th>Description</th>
-                  <th>Serving</th>
-                  <th>Price</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Oat Idly</td>
-                  <td>Steamed idly made with oats and healthy grains</td>
-                  <td>2 pcs</td>
-                  <td>₹80</td>
-               </tr>
-               <tr>
-                  <td>Oat Dosa</td>
-                  <td>Thin crispy dosa made with oats batter</td>
-                  <td>1 pc</td>
-                  <td>₹90</td>
-               </tr>
-               <tr>
-                  <td>Ragi Idly</td>
-                  <td>Nutritious steamed idly made with ragi (finger millet)</td>
-                  <td>2 pcs</td>
-                  <td>₹90</td>
-               </tr>
-               <tr>
-                  <td>Ragi Dosa</td>
-                  <td>Healthy dosa made with ragi (finger millet) batter</td>
-                  <td>1 pc</td>
-                  <td>₹100</td>
-               </tr>
-               <tr>
-                  <td>Classic Idly</td>
-                  <td>Traditional South Indian steamed rice idly</td>
-                  <td>2 pcs</td>
-                  <td>₹70</td>
-               </tr>
-               <tr>
-                  <td>Classic Dosa</td>
-                  <td>Traditional South Indian crispy rice dosa</td>
-                  <td>1 pc</td>
-                  <td>₹80</td>
-               </tr>
-               <!-- Healthy & Wholesome Options -->
-               <tr>
-                  <td>Quinoa Upma</td>
-                  <td>Protein-rich upma made with quinoa and vegetables</td>
-                  <td>1 bowl</td>
-                  <td>₹120</td>
-               </tr>
-               <tr>
-                  <td>Millet Pongal</td>
-                  <td>Comforting pongal made with foxtail millet and moong dal</td>
-                  <td>1 bowl</td>
-                  <td>₹110</td>
-               </tr>
-               <tr>
-                  <td>Vegetable Poha</td>
-                  <td>Flattened rice cooked with turmeric, mustard seeds, and veggies</td>
-                  <td>1 bowl</td>
-                  <td>₹90</td>
-               </tr>
-               <!-- Protein-Rich & Fusion Dishes -->
-               <tr>
-                  <td>Paneer Stuffed Dosa</td>
-                  <td>Crispy dosa filled with spiced paneer</td>
-                  <td>1 pc</td>
-                  <td>₹130</td>
-               </tr>
-               <tr>
-                  <td>Egg White Omelette</td>
-                  <td>Fluffy omelette with herbs and veggies</td>
-                  <td>1 plate</td>
-                  <td>₹120</td>
-               </tr>
-               <tr>
-                  <td>Tofu Bhurji Toast</td>
-                  <td>Spiced scrambled tofu on multigrain toast</td>
-                  <td>2 slices</td>
-                  <td>₹140</td>
-               </tr>
-               <tr>
-                  <td>Avocado Dosa</td>
-                  <td>Dosa topped with mashed avocado and spices</td>
-                  <td>1 pc</td>
-                  <td>₹150</td>
-               </tr>
-               <!-- Continental-Inspired Additions -->
-               <tr>
-                  <td>Greek Yogurt Parfait</td>
-                  <td>Layers of yogurt, granola, and fresh fruits</td>
-                  <td>1 cup</td>
-                  <td>₹130</td>
-               </tr>
-               <tr>
-                  <td>Peanut Butter Banana Toast</td>
-                  <td>Whole wheat toast with peanut butter and banana slices</td>
-                  <td>2 slices</td>
-                  <td>₹100</td>
-               </tr>
-               <tr>
-                  <td>Breakfast Smoothie Bowl</td>
-                  <td>Blended fruits topped with seeds, nuts, and granola</td>
-                  <td>1 bowl</td>
-                  <td>₹150</td>
-               </tr>
-               <!-- Regional Twists -->
-               <tr>
-                  <td>Kanchipuram Idly</td>
-                  <td>Spiced idly with pepper, ginger, and curry leaves</td>
-                  <td>2 pcs</td>
-                  <td>₹90</td>
-               </tr>
-               <tr>
-                  <td>Pesarattu</td>
-                  <td>Andhra-style green gram dosa served with ginger chutney</td>
-                  <td>1 pc</td>
-                  <td>₹100</td>
-               </tr>
-               <tr>
-                  <td>Sabudana Khichdi</td>
-                  <td>Tapioca pearls cooked with peanuts and spices</td>
-                  <td>1 bowl</td>
-                  <td>₹110</td>
-               </tr>
-            </tbody>
-         </table>
-         <!-- Regional Twists table ends here -->
-         </table>
-
-         <!-- Evening Snacks Section -->
-         <h3 class="mt-5 mb-3" style="color:#b85c38;">🕓 Evening Snacks</h3>
-
-         <!-- Indian-Inspired Snacks -->
-         <h5 class="mt-4 mb-2" style="color:#6c757d;">🫓 Indian-Inspired Snacks</h5>
-         <table class="table table-bordered mb-4">
-            <thead class="thead-light">
-               <tr>
-                  <th>Item</th>
-                  <th>Description</th>
-                  <th>Serving</th>
-                  <th>Price</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Mini Samosa Platter</td>
-                  <td>Assorted mini samosas (potato, paneer, corn) with chutneys</td>
-                  <td>6 pcs</td>
-                  <td>₹120</td>
-               </tr>
-               <tr>
-                  <td>Masala Vada</td>
-                  <td>Crispy lentil fritters served with coconut chutney</td>
-                  <td>3 pcs</td>
-                  <td>₹90</td>
-               </tr>
-               <tr>
-                  <td>Paneer Pakora</td>
-                  <td>Cottage cheese fritters in spiced gram flour batter</td>
-                  <td>6 pcs</td>
-                  <td>₹130</td>
-               </tr>
-               <tr>
-                  <td>Sabudana Vada</td>
-                  <td>Tapioca and peanut fritters, lightly spiced</td>
-                  <td>4 pcs</td>
-                  <td>₹110</td>
-               </tr>
-               <tr>
-                  <td>Chilli Cheese Toast</td>
-                  <td>Spicy cheese toast with green chillies and herbs</td>
-                  <td>2 slices</td>
-                  <td>₹100</td>
-               </tr>
-            </tbody>
-         </table>
-
-         <!-- Café-Style Light Bites -->
-         <h5 class="mt-4 mb-2" style="color:#6c757d;">🥪 Café-Style Light Bites</h5>
-         <table class="table table-bordered mb-4">
-            <thead class="thead-light">
-               <tr>
-                  <th>Item</th>
-                  <th>Description</th>
-                  <th>Serving</th>
-                  <th>Price</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Grilled Veg Sandwich</td>
-                  <td>Mixed veggies, cheese, and chutney in grilled bread</td>
-                  <td>1 sandwich</td>
-                  <td>₹130</td>
-               </tr>
-               <tr>
-                  <td>Paneer Tikka Wrap</td>
-                  <td>Spiced paneer and veggies in a whole wheat wrap</td>
-                  <td>1 wrap</td>
-                  <td>₹150</td>
-               </tr>
-               <tr>
-                  <td>Corn & Cheese Balls</td>
-                  <td>Crispy fried balls with gooey cheese and corn</td>
-                  <td>6 pcs</td>
-                  <td>₹140</td>
-               </tr>
-               <tr>
-                  <td>Loaded Nachos (Indian Style)</td>
-                  <td>Nachos topped with chaat masala, veggies, and cheese</td>
-                  <td>1 plate</td>
-                  <td>₹160</td>
-               </tr>
-            </tbody>
-         </table>
-
-         <!-- Healthy & Light Options -->
-         <h5 class="mt-4 mb-2" style="color:#6c757d;">🥗 Healthy & Light Options</h5>
-         <table class="table table-bordered mb-4">
-            <thead class="thead-light">
-               <tr>
-                  <th>Item</th>
-                  <th>Description</th>
-                  <th>Serving</th>
-                  <th>Price</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Sprout Salad Bowl</td>
-                  <td>Protein-rich sprouts with lemon, onion, and spices</td>
-                  <td>1 bowl</td>
-                  <td>₹100</td>
-               </tr>
-               <tr>
-                  <td>Hummus & Veggie Sticks</td>
-                  <td>Creamy hummus served with cucumber and carrot sticks</td>
-                  <td>1 plate</td>
-                  <td>₹120</td>
-               </tr>
-               <tr>
-                  <td>Multigrain Khakhra with Dip</td>
-                  <td>Crunchy khakhras served with mint yogurt dip</td>
-                  <td>1 plate</td>
-                  <td>₹90</td>
-               </tr>
-            </tbody>
-         </table>
-
-         <!-- Quick Sweet Bites -->
-         <h5 class="mt-4 mb-2" style="color:#6c757d;">🍪 Quick Sweet Bites</h5>
-         <table class="table table-bordered mb-5">
-            <thead class="thead-light">
-               <tr>
-                  <th>Item</th>
-                  <th>Description</th>
-                  <th>Serving</th>
-                  <th>Price</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr>
-                  <td>Banana Walnut Muffin</td>
-                  <td>Moist muffin with banana and walnut chunks</td>
-                  <td>1 pc</td>
-                  <td>₹90</td>
-               </tr>
-               <tr>
-                  <td>Ragi Chocolate Cookies</td>
-                  <td>Healthy cookies made with ragi and dark chocolate</td>
-                  <td>3 pcs</td>
-                  <td>₹80</td>
-               </tr>
-               <tr>
-                  <td>Date & Nut Energy Balls</td>
-                  <td>No-sugar bites with dates, nuts, and seeds</td>
-                  <td>3 pcs</td>
-                  <td>₹100</td>
-               </tr>
-            </tbody>
-         </table>
+                     <!-- Quick Sweet Bites -->
+                     <h5 class="mt-4 mb-2" style="color:#6c757d;">🍪 Quick Sweet Bites</h5>
+                     <table class="table table-bordered mb-5">
+                        <thead class="thead-light">
+                           <tr>
+                              <th>Item</th>
+                              <th>Description</th>
+                              <th>Serving</th>
+                              <th>Price</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Banana Walnut Muffin</td>
+                              <td>Moist muffin with banana and walnut chunks</td>
+                              <td>1 pc</td>
+                              <td>₹90</td>
+                           </tr>
+                           <tr>
+                              <td>Ragi Chocolate Cookies</td>
+                              <td>Healthy cookies made with ragi and dark chocolate</td>
+                              <td>3 pcs</td>
+                              <td>₹80</td>
+                           </tr>
+                           <tr>
+                              <td>Date & Nut Energy Balls</td>
+                              <td>No-sugar bites with dates, nuts, and seeds</td>
+                              <td>3 pcs</td>
+                              <td>₹100</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingDesserts">
+                  <h5 class="mb-0">
+                     <button class="btn btn-link btn-block text-left d-flex justify-content-between align-items-center collapsed" type="button"
+                        data-toggle="collapse" data-target="#collapseDesserts" aria-expanded="false" aria-controls="collapseDesserts">
+                        <span>🍰 Snacks & Sides</span>
+                        <span class="accordion-arrow">&#9660;</span>
+                     </button>
+                  </h5>
+               </div>
+               <div id="collapseDesserts" class="collapse" aria-labelledby="headingDesserts">
+                  <div class="card-body">
+                     <!-- Snacks & Sides Submenu (if you have a separate section for desserts or sides) -->
+                     <h3 id="desserts" class="mt-5 mb-3" style="color:#b85c38;">🍰 Snacks & Sides</h3>
+                     <table class="table table-bordered">
+                        <thead class="thead-dark">
+                           <tr>
+                              <th>Item</th>
+                              <th>Description</th>
+                              <th>Size</th>
+                              <th>Price</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td>Croissant (Butter/Chocolate)</td>
+                              <td>Flaky, buttery pastry</td>
+                              <td>Single</td>
+                              <td>₹150 / ₹180</td>
+                           </tr>
+                           <tr>
+                              <td>Banana Bread Slice</td>
+                              <td>Moist banana bread with walnuts</td>
+                              <td>Single</td>
+                              <td>₹160</td>
+                           </tr>
+                           <tr>
+                              <td>Coffee Cake</td>
+                              <td>Soft cake with a cinnamon crumble topping</td>
+                              <td>Slice</td>
+                              <td>₹180</td>
+                           </tr>
+                           <!-- ...existing snacks & sides if any... -->
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
       <!-- Menu Section End -->
 
@@ -694,11 +782,11 @@
          </div>
       </div>
       <!-- footer section end -->
-   </body>
-</html>
-            </p>
-         </div>
-      </div>
-      <!-- footer section end -->
+
+      <!-- Make sure these scripts are included just before </body> -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- ...existing scripts if any... -->
    </body>
 </html>
