@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Order Confirmation - Brew Beans</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <style>
+      body { background: #f8f9fa; }
+      .confirmation-box {
+         max-width: 500px;
+         margin: 60px auto;
+         background: #fff;
+         border-radius: 8px;
+         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+         padding: 32px 24px;
+         text-align: center;
+      }
+      .order-list { text-align: left; margin: 20px 0; }
+      /* Minimal header styles */
+      .header {
+         background: #fff;
+         padding: 18px 0 10px 0;
+         text-align: center;
+         box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+         margin-bottom: 24px;
+      }
+      .header img {
+         height: 48px;
+         vertical-align: middle;
+      }
+      .header span {
+         font-size: 1.6rem;
+         color: #b85c38;
+         font-weight: 600;
+         margin-left: 10px;
+         vertical-align: middle;
+      }
+   </style>
+</head>
+<body>
+   <!-- Minimal Coffee Shop Header Start -->
+   <div class="header">
+      <a href="index.html" style="text-decoration:none;">
+         <img src="images/logo.jpg" alt="Brew Beans Logo">
+         <span>Brew Beans</span>
+      </a>
+   </div>
+   <!-- Minimal Coffee Shop Header End -->
+   <div class="confirmation-box">
+      <h2 style="color:#b85c38;">Thank you for your order!</h2>
+      <p>Your order has been placed successfully.</p>
+      <div class="order-list">
+         <h5>Order Summary:</h5>
+         <ul id="order-items" style="list-style:none;padding-left:0;"></ul>
+         <strong>Total Paid: ₹<span id="order-total"></span></strong>
+         <div id="promo-info" style="color:#28a745;font-size:0.95em;"></div>
+      </div>
+      <p style="margin-top:24px;">Order ID: <span id="order-id"></span></p>
+      <a href="menu.html" class="btn btn-primary mt-3">Back to Menu</a>
+   </div>
+   <script>
+      // Display order details from localStorage
+      const items = JSON.parse(localStorage.getItem('cartItems') || '[]');
+      const total = localStorage.getItem('cartValue') || '0';
+      const promo = localStorage.getItem('promoApplied');
+      // Generate a simple order ID
+      const orderId = 'BB' + Date.now().toString().slice(-6);
+
+      document.getElementById('order-id').textContent = orderId;
+      document.getElementById('order-total').textContent = total;
+      const ul = document.getElementById('order-items');
+      items.forEach(entry => {
+         const li = document.createElement('li');
+         li.textContent = `${entry.item} x${entry.qty} - ₹${entry.price * entry.qty}`;
+         ul.appendChild(li);
+      });
+      if (promo) {
+         document.getElementById('promo-info').textContent = 'Promo code applied: BREW10 (10% off)';
+      }
+      // Optionally clear cartItems and promo after showing
+      localStorage.removeItem('cartItems');
+      localStorage.removeItem('promoApplied');
+      localStorage.removeItem('cartValue');
+   </script>
+</body>
+</html>
