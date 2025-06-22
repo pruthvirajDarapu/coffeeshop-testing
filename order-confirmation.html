@@ -48,9 +48,9 @@
    </div>
    <!-- Minimal Coffee Shop Header End -->
    <div class="confirmation-box">
-      <h2 style="color:#b85c38;">Thank you for your order!</h2>
-      <p>Your order has been placed successfully.</p>
-      <div class="order-list">
+      <h2 style="color:#b85c38;" id="confirmation-title">Thank you for your order!</h2>
+      <p id="confirmation-msg">Your order has been placed successfully.</p>
+      <div class="order-list" id="order-summary">
          <h5>Order Summary:</h5>
          <ul id="order-items" style="list-style:none;padding-left:0;"></ul>
          <strong>Total Paid: ₹<span id="order-total"></span></strong>
@@ -77,6 +77,15 @@
       });
       if (promo) {
          document.getElementById('promo-info').textContent = 'Promo code applied: BREW10 (10% off)';
+      }
+      // Loyalty membership check
+      const isLoyalty = localStorage.getItem('loyaltyMembership') === 'true';
+      if (isLoyalty) {
+         document.getElementById('confirmation-title').textContent = 'Congrats on becoming a member!';
+         document.getElementById('confirmation-msg').textContent = 'Your loyalty membership is now active.';
+         document.getElementById('order-summary').style.display = 'none';
+         // Optionally clear the flag
+         localStorage.removeItem('loyaltyMembership');
       }
       // Optionally clear cartItems and promo after showing
       localStorage.removeItem('cartItems');

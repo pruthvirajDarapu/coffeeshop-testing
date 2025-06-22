@@ -71,7 +71,7 @@
                   <h2>Gold Member</h2>
                   <p>Benefits: Free coffee every week, 20% discount on all purchases, priority support.</p>
                   <p class="text-danger font-weight-bold">Price: $50/year</p>
-                  <button class="btn btn-danger">Join Now</button>
+                  <button id="join-now-btn" class="btn btn-danger">Join Now</button>
                </div>
             </div>
             <div class="col-md-6 col-12">
@@ -150,5 +150,11 @@
          </div>
       </div>
       <!-- copyright section end -->
+      <script>
+         document.getElementById('join-now-btn').addEventListener('click', function() {
+            localStorage.setItem('loyaltyMembership', 'true');
+            window.location.href = 'payment.html?loyalty=1';
+         });
+      </script>
    </body>
 </html>
