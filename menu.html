@@ -1594,6 +1594,7 @@
          <h5>Your Cart</h5>
          <ul id="cart-items" style="list-style:none;padding-left:0;"></ul>
          <strong>Total: ₹<span id="cart-total">0</span></strong>
+         <button id="checkout-btn" class="btn btn-primary btn-block mt-2">Checkout</button>
       </div>
 
       <!-- Place this script after all other scripts, just before </body> -->
@@ -1648,6 +1649,15 @@
             });
             document.getElementById('cart-total').textContent = total;
          }
+         // Add checkout button logic
+         document.getElementById('checkout-btn').addEventListener('click', function() {
+            if (cart.length === 0) {
+               alert('Your cart is empty!');
+               return;
+            }
+            // Optionally, save cart to localStorage/sessionStorage here
+            window.location.href = 'payment.html';
+         });
       </script>
    </body>
 </html>
