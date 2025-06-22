@@ -1648,6 +1648,8 @@
                cartList.appendChild(li);
             });
             document.getElementById('cart-total').textContent = total;
+            // Store the latest total in a global variable for checkout
+            window.totalCartValue = total;
          }
          // Add checkout button logic
          document.getElementById('checkout-btn').addEventListener('click', function() {
@@ -1655,9 +1657,9 @@
                alert('Your cart is empty!');
                return;
             }
-            // Optionally, save cart to localStorage/sessionStorage here
-            localStorage.setItem('cartValue', total); // Save cart value to localStorage
-            window.location.href = "payment.html?cartValue=" + totalCartValue;
+            // Save cart value to localStorage and redirect with query param
+            localStorage.setItem('cartValue', window.totalCartValue);
+            window.location.href = "payment.html?cartValue=" + window.totalCartValue;
          });
       </script>
    </body>
