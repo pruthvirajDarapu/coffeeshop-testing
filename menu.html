@@ -1657,8 +1657,9 @@
                alert('Your cart is empty!');
                return;
             }
-            // Save cart value to localStorage and redirect with query param
+            // Save cart value and cart items to localStorage and redirect with query param
             localStorage.setItem('cartValue', window.totalCartValue);
+            localStorage.setItem('cartItems', JSON.stringify(cart));
             window.location.href = "payment.html?cartValue=" + window.totalCartValue;
          });
       </script>
