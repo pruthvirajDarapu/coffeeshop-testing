@@ -72,10 +72,14 @@
       </div>
    </div>
    <script>
-      // Get cart value from query string
+      // Get cart value from localStorage, then query string, then 0
       function getCartValue() {
+         let value = localStorage.getItem('cartValue');
+         if (value !== null && !isNaN(parseFloat(value))) {
+            return parseFloat(value);
+         }
          const params = new URLSearchParams(window.location.search);
-         const value = parseFloat(params.get('cartValue'));
+         value = parseFloat(params.get('cartValue'));
          return isNaN(value) ? 0 : value;
       }
       // Calculate and display summary
