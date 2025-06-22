@@ -644,7 +644,13 @@
                               <td>6 pcs</td>
                               <td>₹120</td>
                               <td><span title="Contains gluten, dairy">🌾🥛</span></td>
-                              <td></td>
+                              <td>
+                                 <button class="btn btn-sm btn-primary add-to-cart"
+                                    data-item="Mini Samosa Platter"
+                                    data-price="120">
+                                    Add to Cart
+                                 </button>
+                              </td>
                            </tr>
                            <tr>
                               <td>🟢 Masala Vada</td>
@@ -652,7 +658,13 @@
                               <td>3 pcs</td>
                               <td>₹90</td>
                               <td></td>
-                              <td></td>
+                              <td>
+                                 <button class="btn btn-sm btn-primary add-to-cart"
+                                    data-item="Masala Vada"
+                                    data-price="90">
+                                    Add to Cart
+                                 </button>
+                              </td>
                            </tr>
                            <tr>
                               <td>🟢 Paneer Pakora</td>
@@ -1071,5 +1083,56 @@
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <!-- ...existing scripts if any... -->
+
+      <!-- Add this cart section just before the closing </body> tag -->
+      <div id="cart" style="position:fixed;top:80px;right:20px;width:300px;background:#fff;border:1px solid #ccc;padding:15px;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+         <h5>Your Cart</h5>
+         <ul id="cart-items" style="list-style:none;padding-left:0;"></ul>
+         <strong>Total: ₹<span id="cart-total">0</span></strong>
+      </div>
+
+      <!-- Place this script after all other scripts, just before </body> -->
+      <script>
+         // Simple cart logic
+         let cart = [];
+         // Delegate event to document for dynamic content
+         document.addEventListener('click', function(e) {
+            if (e.target && e.target.classList.contains('add-to-cart')) {
+               const item = e.target.getAttribute('data-item');
+               const price = parseInt(e.target.getAttribute('data-price'));
+               // Check if item already in cart, increase quantity if so
+               const found = cart.find(entry => entry.item === item);
+               if (found) {
+                  found.qty += 1;
+               } else {
+                  cart.push({item, price, qty: 1});
+               }
+               updateCart();
+            }
+         });
+
+         function updateCart() {
+            const cartList = document.getElementById('cart-items');
+            cartList.innerHTML = '';
+            let total = 0;
+            cart.forEach((entry, idx) => {
+               total += entry.price * entry.qty;
+               const li = document.createElement('li');
+               li.innerHTML = `${entry.item} x${entry.qty} - ₹${entry.price * entry.qty}
+                  <button class="btn btn-xs btn-danger remove-cart-item" data-idx="${idx}" style="float:right;padding:0 6px;font-size:12px;">&times;</button>`;
+               cartList.appendChild(li);
+            });
+            document.getElementById('cart-total').textContent = total;
+         }
+
+         // Remove item from cart
+         document.addEventListener('click', function(e) {
+            if (e.target && e.target.classList.contains('remove-cart-item')) {
+               const idx = parseInt(e.target.getAttribute('data-idx'));
+               cart.splice(idx, 1);
+               updateCart();
+            }
+         });
+      </script>
    </body>
 </html>
