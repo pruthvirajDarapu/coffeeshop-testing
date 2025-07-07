@@ -1041,3 +1041,99 @@ a:hover {
     text-shadow: 1px 1px 4px #000;
     z-index: 2;
 }
+
+body.order-confirmation {
+  background: #faf9f6;
+  font-family: 'Segoe UI', sans-serif;
+}
+.confirmation-container {
+  max-width: 420px;
+  margin: 48px auto 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 32px 28px 28px 28px;
+  text-align: center;
+}
+.header {
+  margin-bottom: 18px;
+}
+.header img {
+  height: 60px;
+  vertical-align: middle;
+}
+.header span {
+  font-size: 1.6rem;
+  color: #b85c38;
+  font-weight: 600;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+.confirmation-title {
+  color: #b85c38;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+}
+.confirmation-msg {
+  color: #444;
+  margin-bottom: 18px;
+}
+.order-list {
+  margin: 18px 0 10px 0;
+  text-align: left;
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 18px 18px 10px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  font-size: 1rem;
+}
+.order-list h5 {
+  margin-bottom: 10px;
+  color: #b85c38;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.order-list ul {
+  margin-bottom: 10px;
+}
+.order-list strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.08em;
+}
+.order-id {
+  margin-top: 18px;
+  color: #888;
+  font-size: 0.98em;
+}
+.btn-primary {
+  margin-top: 18px;
+}
+.order_taital {
+  color: #b85c38;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.footer_text {
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 1.4;
+}
+.padding_left_10 {
+  padding-left: 10px;
+}
+.header_section {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  text-align: center;
+}
+.marquee {
+  color: #ff5733;
+  font-weight: bold;
+  font-size: 18px;
+}
