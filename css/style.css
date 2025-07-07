@@ -225,6 +225,31 @@ button {
     background-size: 100%;
 }
 
+.header_section .container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.header_section .logo {
+  margin-bottom: 0;
+}
+.header_section nav.navbar {
+  flex: 1;
+  margin-left: 30px;
+}
+@media (max-width: 991px) {
+  .header_section .container-fluid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header_section nav.navbar {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
 .bg-light {
     background-color: transparent !important;
 }

@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title>Order Confirmation - Brew Beans</title>
+   <title>COFFEE CARTEL - Order Confirmation</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="Order confirmation for COFFEE CARTEL. Thank you for your order!">
+   <meta name="author" content="COFFEE CARTEL">
    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="css/style.css">
    <style>
@@ -24,7 +26,7 @@
          margin-bottom: 18px;
       }
       .header img {
-         height: 48px;
+         height: 60px;
          vertical-align: middle;
       }
       .header span {
@@ -75,17 +77,54 @@
       .btn-primary {
          margin-top: 18px;
       }
+      .order_taital {
+         color: #b85c38;
+         font-weight: 700;
+         margin-bottom: 8px;
+         font-size: 1.8rem;
+         text-align: center;
+      }
+      .footer_text {
+         color: #777;
+         font-size: 0.9rem;
+         margin-top: 20px;
+         text-align: center;
+         line-height: 1.4;
+      }
+      .padding_left_10 {
+         padding-left: 10px;
+      }
+      .header_section {
+         background-color: #f8f9fa;
+         padding: 10px 0;
+         text-align: center;
+      }
+      .marquee {
+         color: #ff5733;
+         font-weight: bold;
+         font-size: 18px;
+      }
    </style>
 </head>
 <body>
-   <div class="confirmation-container">
-      <div class="header">
-         <a href="index.html" style="text-decoration:none;">
-            <img src="images/logo.jpg" alt="Brew Beans Logo">
-            <span></span>
-         </a>
+   <div class="header_section">
+      <div class="container-fluid">
+         <div class="header">
+            <a href="index.html" style="text-decoration:none;">
+               <img src="images/logo.jpg" alt="COFFEE CARTEL Logo" style="height: 60px;" class="img-fluid">
+               <span></span>
+            </a>
+         </div>
+         <div class="marquee">
+            <marquee behavior="scroll" direction="left">
+               Launching Very Soon!
+            </marquee>
+         </div>
       </div>
-      <div class="confirmation-title" id="confirmation-title">Thank you for your order!</div>
+      <div style="clear: both;"></div>
+   </div>
+   <div class="confirmation-container">
+      <h1 class="order_taital">Thank you for ordering from COFFEE CARTEL!</h1>
       <div class="confirmation-msg" id="confirmation-msg">Your order has been placed successfully.</div>
       <div class="order-list" id="order-summary">
          <h5>Order Summary:</h5>
@@ -95,6 +134,8 @@
       </div>
       <div class="order-id">Order ID: <span id="order-id"></span></div>
       <a href="menu.html" class="btn btn-primary">Back to Menu</a>
+      <p class="footer_text">At COFFEE CARTEL, our values are the heart of everything we do. <!-- ...etc... --></p>
+      <span class="padding_left_10">Email : coffeecartel@gmail.com</span>
    </div>
    <script>
       // Display order details from localStorage
